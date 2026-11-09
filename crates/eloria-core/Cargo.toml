@@ -1,0 +1,35 @@
+[package]
+name = "eloria-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Eloria core: Markdown vault, index, search, graph, Zotero mirror, reading notes, export"
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+chrono.workspace = true
+rusqlite = { version = "0.41", features = ["bundled"] }
+serde_yaml = "0.9"
+pulldown-cmark = { version = "0.13", default-features = false, features = ["html"] }
+regex = "1"
+walkdir = "2"
+minijinja = { version = "2", features = ["json", "loader"] }
+# Native system TLS (SChannel on Windows) for AI and metadata services.
+# No rustls: it depends on `ring`, which needs clang to build on Windows ARM64.
+ureq = { version = "3", default-features = false, features = ["json", "native-tls"] }
+base64 = "0.22"
+# API keys in the Windows Credential Manager (the system keychain elsewhere).
+keyring = { version = "3", features = ["windows-native", "apple-native", "linux-native"] }
+unicode-normalization = "0.1"
+# Vault backups (.zip archives, pure-Rust compression).
+zip = { version = "2", default-features = false, features = ["deflate"] }
+# Reading compressed PDF streams (DOI lookup).
+flate2 = "1"
+# Fingerprint of approved extension code.
+sha2 = "0.10"
+
+[dev-dependencies]
+tempfile = "3"

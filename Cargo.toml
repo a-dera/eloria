@@ -1,0 +1,22 @@
+[workspace]
+resolver = "2"
+members = ["crates/eloria-core", "crates/eloria-mcp", "src-tauri"]
+
+[workspace.package]
+version = "0.3.0"
+edition = "2021"
+authors = ["Amédée Wend-Bénédo DERA"]
+license = "MIT"
+repository = "https://github.com/a-dera/eloria"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+chrono = { version = "0.4", features = ["serde"] }
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

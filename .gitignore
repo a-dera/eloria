@@ -1,0 +1,25 @@
+node_modules/
+dist/
+target/
+src-tauri/gen/
+*.log
+.DS_Store
+# Eloria's internal data inside vaults (index, history, trash)
+.eloria/
+test-results/
+playwright-report/
+# Versions prepared by npm run release (installers, checksums)
+release/
+
+# Local, unpublished files (personal notes, local tooling, UI tests)
+CLAUDE.md
+TODO.md
+Lancer Eloria.cmd
+tests/ui/
+playwright.config.ts
+crates/eloria-core/examples/
+docs/internal/
+# Sidecar binaries copied by scripts/bundle.mjs
+src-tauri/binaries/
+scripts/capture.mjs
+scripts/real-app.mjs

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Eloria : la plume du chercheur. Le trait qu'elle écrit se ramifie en graphe de savoir :
+       l'écriture et les connaissances reliées, au même geste. -->
+  <defs>
+    <linearGradient id="fond" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2e2550"/>
+      <stop offset="1" stop-color="#130f20"/>
+    </linearGradient>
+    <linearGradient id="or" gradientUnits="userSpaceOnUse" x1="360" y1="220" x2="660" y2="760">
+      <stop offset="0" stop-color="#fff0c6"/>
+      <stop offset=".45" stop-color="#f3c66a"/>
+      <stop offset="1" stop-color="#c98a26"/>
+    </linearGradient>
+    <linearGradient id="bague" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6b52d9"/>
+      <stop offset="1" stop-color="#3a2a8c"/>
+    </linearGradient>
+    <linearGradient id="encre" gradientUnits="userSpaceOnUse" x1="700" y1="700" x2="300" y2="760">
+      <stop offset="0" stop-color="#d79a35"/>
+      <stop offset=".4" stop-color="#b9a4ff"/>
+      <stop offset="1" stop-color="#8f74ff"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8f74ff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#8f74ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="48" y="48" width="928" height="928" rx="224" fill="url(#fond)"/>
+  <circle cx="500" cy="440" r="380" fill="url(#halo)"/>
+
+  <!-- Plume de stylo, inclinée vers la page -->
+  <g transform="rotate(-38 512 470)">
+    <!-- section du stylo (bague) -->
+    <rect x="364" y="112" width="296" height="112" rx="30" fill="url(#bague)"/>
+    <rect x="364" y="198" width="296" height="20" rx="10" fill="#f3c66a"/>
+    <!-- plume : base large, épaules, pointe fine -->
+    <path d="M376 214 H648 C680 330 694 432 670 522 L562 688 L512 774 L462 688 L354 522 C330 432 344 330 376 214 Z" fill="url(#or)"/>
+    <!-- reflet -->
+    <path d="M410 250 C388 330 384 420 400 500" fill="none" stroke="#fff7df" stroke-opacity=".6" stroke-width="20" stroke-linecap="round"/>
+    <!-- trou d'aération et fente, arrêtée avant la pointe -->
+    <circle cx="512" cy="440" r="42" fill="#130f20"/>
+    <path d="M512 482 V720" stroke="#130f20" stroke-width="20" stroke-linecap="round"/>
+  </g>
+
+  <!-- Le trait d'encre part de la pointe et devient un graphe -->
+  <g fill="none" stroke="url(#encre)" stroke-width="30" stroke-linecap="round">
+    <path d="M700 718 C688 790 620 822 544 826"/>
+    <path d="M544 826 C470 830 390 806 318 756"/>
+    <path d="M544 826 C606 838 664 866 720 884"/>
+  </g>
+  <circle cx="544" cy="826" r="30" fill="#b9a4ff"/>
+  <circle cx="304" cy="748" r="42" fill="#efeaff"/>
+  <circle cx="732" cy="888" r="34" fill="#efeaff"/>
+</svg>

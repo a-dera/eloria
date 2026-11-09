@@ -1,0 +1,25 @@
+[package]
+name = "eloria"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+description = "Eloria: a personal workspace for research, writing and knowledge."
+
+[lib]
+name = "eloria_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+eloria-core = { path = "../crates/eloria-core" }
+tauri = { version = "2", features = ["protocol-asset"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-opener = "2"
+tauri-plugin-window-state = "2"
+serde.workspace = true
+serde_json.workspace = true
+notify = "8"
+base64 = "0.22"
